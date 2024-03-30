@@ -33,7 +33,7 @@ const Problem = () => {
         e.preventDefault();
 
         try {
-            const { data } = await axios.post("http://localhost:8000/api/job/create-job", {
+            const { data } = await axios.post("https://job-portal-uqhl.onrender.com/api/job/create-job", {
                 company: formData.company,
                 problem: formData.problem,
                 location: formData.location,

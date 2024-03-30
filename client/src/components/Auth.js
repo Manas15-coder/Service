@@ -28,7 +28,7 @@ const Auth = () => {
     }
     const sendRequest = async (type = "login") => {
         try {
-            const { data } = await axios.post(`http://localhost:8000/api/user/${type}`, {
+            const { data } = await axios.post(`https://job-portal-uqhl.onrender.com/api/user/${type}`, {
                 username: inputs.name,
                 email: inputs.email,
                 phone: inputs.phone,

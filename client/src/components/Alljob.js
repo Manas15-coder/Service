@@ -26,7 +26,7 @@ const Alljob = () => {
 
     const sendRequest = async () => {
         try {
-            const { data } = await axios.get('http://localhost:8000/api/job/all-job');
+            const { data } = await axios.get('https://job-portal-uqhl.onrender.com/api/job/all-job');
             if (data?.success) {
                 setJobs(data?.jobs);
                 setFilteredJobs(data?.jobs);

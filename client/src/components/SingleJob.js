@@ -31,7 +31,7 @@ const SingleJob = () => {
                     'Authorization': userId
                 }
             }
-            const { data } = await axios.post(`http://localhost:8000/api/job/apply/${job._id}`, {}, config)
+            const { data } = await axios.post(`https://job-portal-uqhl.onrender.com/api/job/apply/${job._id}`, {}, config)
             if (data?.success) {
                 toast.success('Successfully Applied to Job')
             }
@@ -42,7 +42,7 @@ const SingleJob = () => {
 
     const fetchJobDetails = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:8000/api/job/get-job/${jobId}`);
+            const { data } = await axios.get(`https://job-portal-uqhl.onrender.com/api/job/get-job/${jobId}`);
             if (data?.success) {
                 setJob(data?.job);
             }
